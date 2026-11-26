@@ -1096,6 +1096,30 @@ a:focus-visible {
   }
 }
 
+.personal-links,
+.afdian-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.personal-links a {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.personal-links a:hover {
+  color: var(--orange);
+  text-decoration: underline;
+}
+
+.afdian-note > span {
+  color: var(--orange);
+  font-weight: 700;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
