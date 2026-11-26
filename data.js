@@ -1473,10 +1473,16 @@ function createMonthlyCandidates(month, highQualityHires = 0) {
 function createMonthlyQuestions(unlockedQuestionIds = []) {
     const isAvailable = (question) => !question.unlockOnly
       || unlockedQuestionIds.includes(question.id);
+    const unlockableIds = new Set(CANDIDATES.flatMap((candidate) => candidate.unlockQuestionIds || []));
     const commonQuestions = QUESTIONS.filter((question) => question.type === "common" && isAvailable(question));
-    const abstractQuestions = shuffle(QUESTIONS.filter((question) => question.type === "abstract" && isAvailable(question)))
+    const newlyUnlockedAbstract = QUESTIONS.filter((question) => question.type === "abstract"
+      && unlockedQuestionIds.includes(question.id));
+    const rotatingAbstract = shuffle(QUESTIONS.filter((question) => question.type === "abstract"
+      && !question.unlockOnly
+      && !unlockableIds.has(question.id)
+      && !unlockedQuestionIds.includes(question.id)))
       .slice(0, CONFIG.abstractQuestionsPerMonth);
-    return [...commonQuestions, ...abstractQuestions];
+    return [...commonQuestions, ...rotatingAbstract, ...newlyUnlockedAbstract];
   }
 
 function resolveAnswer(candidate, question) {

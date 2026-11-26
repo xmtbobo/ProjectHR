@@ -402,6 +402,9 @@
           <p>智力：总值 ${state.stats.totals.intelligence}，均值 ${formatAverage(state.stats.averages.intelligence)}</p>
           <p>社交：总值 ${state.stats.totals.social}，均值 ${formatAverage(state.stats.averages.social)}</p>
           <p>神人指数：总值 ${state.stats.totals.weirdness}，均值 ${formatAverage(state.stats.averages.weirdness)}</p>
+          <p>工作积极性：均值 ${formatAverage(state.stats.averages.motivation)}</p>
+          <p>服从度：均值 ${formatAverage(state.stats.averages.obedience)}</p>
+          <p>稳定性：均值 ${formatAverage(state.stats.averages.stability)}</p>
         </div>
         ${renderNewsArchive(state.newsHistory)}
         <button class="button button-accent" type="button" data-action="restart">重新开始</button>
