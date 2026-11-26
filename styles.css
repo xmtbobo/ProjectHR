@@ -404,6 +404,32 @@ a:focus-visible {
   gap: 8px;
 }
 
+.question-entry {
+  display: grid;
+}
+
+.inline-answer {
+  margin: 4px 4px 8px 14px;
+  padding: 12px 14px;
+  border-left: 3px solid var(--orange);
+  border-radius: 0 10px 10px 0;
+  background: var(--card);
+  box-shadow: 0 4px 14px rgba(40, 48, 40, 0.04);
+}
+
+.inline-answer strong {
+  color: var(--orange);
+  font-size: 11px;
+}
+
+.inline-answer p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
 .question-button {
   width: 100%;
   display: flex;

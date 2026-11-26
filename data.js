@@ -77,6 +77,9 @@ window.CampusData = (() => {
     "happy": {
       "weirdnessAverage": 80
     },
+    "plain": {
+      "weirdnessAverageMax": 20
+    },
     "quantity": {
       "intelligenceTotal": 650,
       "socialTotal": 650,
@@ -1311,6 +1314,11 @@ window.CampusData = (() => {
     "title": "工位欢乐多",
     "subtitle": "上班像开盲盒，工位永远不缺节目。",
     "description": "神人指数均值高到已经无法被日常管理掩盖。工位上每天都有新情况发生，员工是否稳定完成工作已经不那么容易判断，但至少办公室绝对不会无聊。"
+  },
+  "plain-company": {
+    "title": "平平淡淡才是真",
+    "subtitle": "没有神人出圈，日子也能过。",
+    "description": "神人指数均值始终处于低位，公司里没有太多值得写成新闻的异常。项目按部就班推进，员工按时上下班，你终于发现，普通而稳定也是一种难得的经营成果。"
   },
   "quantity-victory": {
     "title": "以量取胜",

@@ -174,11 +174,15 @@
           ${questions.map((question) => {
             const disabled = noQuestionsLeft || askedIds.has(question.id);
             const asked = askedIds.has(question.id);
+            const answer = state.askedQuestions.find((item) => item.questionId === question.id);
             return `
-              <button class="question-button" type="button" data-action="ask" data-question-id="${question.id}" ${disabled ? "disabled" : ""}>
-                <span>${question.text}</span>
-                <small>${asked ? "已提问" : noQuestionsLeft ? "次数已用完" : "提问"}</small>
-              </button>
+              <div class="question-entry">
+                <button class="question-button" type="button" data-action="ask" data-question-id="${question.id}" ${disabled ? "disabled" : ""}>
+                  <span>${question.text}</span>
+                  <small>${asked ? "已提问" : noQuestionsLeft ? "次数已用完" : "提问"}</small>
+                </button>
+                ${answer ? `<div class="inline-answer"><strong>回答</strong><p>${answer.answer}</p></div>` : ""}
+              </div>
             `;
           }).join("")}
         </div>
@@ -197,7 +201,6 @@
         ${renderQuestionGroup(state, "common", "常规问题")}
         ${renderQuestionGroup(state, "abstract", "本月抽象问题")}
         ${remaining === 0 ? '<p class="limit-note">提问次数已用完，该作出决定了。</p>' : ""}
-        ${renderAnswerHistory(state.askedQuestions)}
       </div>
     `;
   }
@@ -467,6 +470,9 @@
       action(button);
       const unlocks = Game.consumeAchievementUnlocks();
       render();
+      if (["hire", "reject"].includes(button.dataset.action)) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
       showAchievementUnlocks(unlocks);
     }
   });

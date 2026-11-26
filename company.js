@@ -77,6 +77,7 @@ window.CampusCompany = (() => {
     if (rule.intelligenceAverage !== undefined && stats.averages.intelligence < rule.intelligenceAverage) return false;
     if (rule.socialAverage !== undefined && stats.averages.social < rule.socialAverage) return false;
     if (rule.weirdnessAverage !== undefined && stats.averages.weirdness < rule.weirdnessAverage) return false;
+    if (rule.weirdnessAverageMax !== undefined && stats.averages.weirdness > rule.weirdnessAverageMax) return false;
     if (rule.employeeCount !== undefined && stats.employeeCount < rule.employeeCount) return false;
     if (rule.employeeEquals !== undefined && stats.employeeCount !== rule.employeeEquals) return false;
     if (rule.employeeMax !== undefined && stats.employeeCount > rule.employeeMax) return false;
@@ -114,6 +115,7 @@ window.CampusCompany = (() => {
       ["regret-exit", () => isRegretExit(stats)],
       ["weirdness-code", () => matchesEnding(stats, rules.code)],
       ["happy-workstations", () => matchesEnding(stats, rules.happy)],
+      ["plain-company", () => matchesEnding(stats, rules.plain)],
       ["quantity-victory", () => matchesEnding(stats, rules.quantity)],
       ["normal-operation", () => matchesEnding(stats, rules.normal)],
       ["struggling-company", () => matchesEnding(stats, rules.struggling)],
