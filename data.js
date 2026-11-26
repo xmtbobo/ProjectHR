@@ -859,13 +859,13 @@ window.CampusData = (() => {
     {
       "attribute": "obedience",
       "min": 80,
-      "probability": 0.8,
+      "probability": 0.99,
       "text": "如果集体目标清晰，我也可以成为一只靠谱的蚂蚁。"
     },
     {
       "attribute": "obedience",
       "max": 30,
-      "probability": 0.8,
+      "probability": 0.99,
       "text": "贵司可真是擅长PUA呢，你真是大聪明，好棒棒啊，看见你就像看见你们化粪池一样的工作风气，那我可得快躲远点。"
     }
   ],
@@ -1006,13 +1006,13 @@ window.CampusData = (() => {
     {
       "attribute": "obedience",
       "min": 75,
-      "probability": 0.8,
+      "probability": 0.95,
       "text": "作为员工，我应该把自己的个人利益和公司利益对齐，设身处地为整体大局着想。我的努力不是内卷，而是带动大家一起前进。"
     },
     {
       "attribute": "obedience",
       "max": 30,
-      "probability": 0.8,
+      "probability": 0.95,
       "text": "注意啦！无良公司，无良公司，老板欠下三点五个亿，还要我们无偿加班，"
     }
   ],
@@ -1148,7 +1148,7 @@ window.CampusData = (() => {
     "id": "intelligence-low-requirements",
     "attribute": "intelligence",
     "direction": "low",
-    "threshold": 30,
+    "threshold": 40,
     "title": "一个需求，七种理解",
     "text": "本月公司收到一句“把页面做得简单一点”。员工们交出了七套方案，其中三套需要量子计算机，两套没有页面，剩下两套正在争论“简单”是不是一种颜色。"
   },
@@ -1164,7 +1164,7 @@ window.CampusData = (() => {
     "id": "social-low-silence",
     "attribute": "social",
     "direction": "low",
-    "threshold": 30,
+    "threshold": 40,
     "title": "全公司都在已读不回",
     "text": "本周会议再次刷新最短纪录：主持人问完“大家有想法吗”后，全员同时低头。客户发来的消息倒是回复了，回复内容是员工不小心发出的一个句号。"
   },
@@ -1180,7 +1180,7 @@ window.CampusData = (() => {
     "id": "motivation-low-slacking",
     "attribute": "motivation",
     "direction": "low",
-    "threshold": 30,
+    "threshold": 40,
     "title": "每天实际工作 20 分钟",
     "text": "你发现你们公司的卫生间隔间越来越紧俏了——后面大家都不演了，在工位上开始摸鱼，一款叫做《校招模拟器》的游戏开始流行。经统计，你的员工们每天实际工作时间竟高达 20 分钟！！"
   },
@@ -1188,7 +1188,7 @@ window.CampusData = (() => {
     "id": "motivation-high-tasks",
     "attribute": "motivation",
     "direction": "high",
-    "threshold": 70,
+    "threshold": 80,
     "title": "任务开始自己消失",
     "text": "员工们最近总在主动认领任务，待办列表刚刷新就又被清空。HR 被迫反复确认：他们究竟是真的热爱工作，还是在背着公司进行某种效率竞赛。"
   },
@@ -1196,7 +1196,7 @@ window.CampusData = (() => {
     "id": "obedience-low-chaos",
     "attribute": "obedience",
     "direction": "low",
-    "threshold": 30,
+    "threshold": 40,
     "title": "公司安排成了选修课",
     "text": "本周每个人都按照自己的理解执行任务。会议通知被当成写作灵感，项目排期被当成许愿清单，只有下班时间得到了全公司最一致地遵守。"
   },
@@ -1204,7 +1204,7 @@ window.CampusData = (() => {
     "id": "obedience-high-typo",
     "attribute": "obedience",
     "direction": "high",
-    "threshold": 70,
+    "threshold": 80,
     "title": "全员执行了老板的口误",
     "text": "老板在会上随口说了句“要不先把会议室漆成绿色”，下午回来时发现采购、设计和施工已经全部完成。执行力的确惊人，只是以后发言最好先过一遍脑子。"
   },
@@ -1212,7 +1212,7 @@ window.CampusData = (() => {
     "id": "stability-low-empty-desks",
     "attribute": "stability",
     "direction": "low",
-    "threshold": 30,
+    "threshold": 40,
     "title": "工位开始按天出租",
     "text": "本月员工流动速度快到门卡来不及注销。行政部决定不再打印固定姓名牌，改用可擦写白板；保洁阿姨则成了目前工龄最长的工作人员。"
   },
@@ -1222,13 +1222,13 @@ window.CampusData = (() => {
     "direction": "high",
     "threshold": 70,
     "title": "新员工成了稀有动物",
-    "text": "团队人员稳定得令人安心，茶水间里甚至还能讨论十年前的老项目。唯一的问题是，每当有新面孔出现，大家都会自动围过去确认他是不是走错了公司。"
+    "text": "团队人员稳定得令人安心，没有人想着离职，大家没有35岁危机，春和景明。"
   },
   {
     "id": "weirdness-low-normal",
     "attribute": "weirdness",
     "direction": "low",
-    "threshold": 30,
+    "threshold": 40,
     "title": "公司正常得令人起疑",
     "text": "本月没有人穿着奇怪服装上班，没有人给打印机起名字，也没有人试图给植物做绩效面谈。公司正常得让 HR 开始怀疑，大家是不是在偷偷准备一件更大的事。"
   },
@@ -1280,7 +1280,7 @@ window.CampusData = (() => {
     "attribute": "weirdness",
     "direction": "normal",
     "title": "本月只有少量异常事件",
-    "text": "办公室大体正常，只是打印机偶尔被称为“出版总监”。除此之外，公司尚未出现需要专门成立调查组的新情况。"
+    "text": "办公室大体正常，神人和非神人之间取得了微妙的平衡。"
   }
 ];
 
@@ -1289,11 +1289,6 @@ window.CampusData = (() => {
     "title": "王牌公司",
     "subtitle": "不靠离谱出圈，也能把实力变成招牌。",
     "description": "智力与社交积累足够扎实，积极性、服从度和稳定性也都在可靠水平线上，神人指数还被控制在合理范围内。你组建的是一支真正能持续交付的队伍，而不是一份看起来很热闹的招聘战报。"
-  },
-  "unusual-company": {
-    "title": "神人公司",
-    "subtitle": "实力和神人指数一起突破天花板。",
-    "description": "公司的智力、社交和神人积累都达到了惊人水平，团队还能保持基本的工作秩序。外界已经无法判断你们究竟是正常企业，还是一种尚未被行业命名的新型组织。"
   },
   "extreme-efficiency": {
     "title": "极致高效",
@@ -1314,11 +1309,6 @@ window.CampusData = (() => {
     "title": "工位欢乐多",
     "subtitle": "上班像开盲盒，工位永远不缺节目。",
     "description": "神人指数均值高到已经无法被日常管理掩盖。工位上每天都有新情况发生，员工是否稳定完成工作已经不那么容易判断，但至少办公室绝对不会无聊。"
-  },
-  "plain-company": {
-    "title": "平平淡淡才是真",
-    "subtitle": "没有神人出圈，日子也能过。",
-    "description": "神人指数均值始终处于低位，公司里没有太多值得写成新闻的异常。项目按部就班推进，员工按时上下班，你终于发现，普通而稳定也是一种难得的经营成果。"
   },
   "quantity-victory": {
     "title": "以量取胜",
@@ -1355,10 +1345,15 @@ window.CampusData = (() => {
     "subtitle": "人不多，但每一个决定都很谨慎。",
     "description": "公司人数始终保持在很少的规模。你更倾向于谨慎筛选，而不是用扩张掩盖问题。这样的策略能够控制风险，也意味着团队必须用有限的人手完成接下来的所有工作。"
   },
+  "unusual-company": {
+    "title": "神人公司",
+    "subtitle": "公司没倒，只是逐渐超出了常理解释范围。",
+    "description": "神人指数已经突破正常企业的认知边界，但智力与社交家底足够厚。外界无法判断你们是在胡闹，还是在引领下一代组织形态。"
+  },
   "standard": {
-    "title": "六个月经营结束",
+    "title": "三个月经营结束",
     "subtitle": "公司还在，招聘也还要继续。",
-    "description": "本轮六个月经营已经结束，没有触发特殊结局。公司依旧照常运转，员工们也大多记得自己来这里上班。下一轮招聘仍然值得尝试，也许会出现完全不同的结果。"
+    "description": "本月经营周期已经结束，没有触发特殊结局。你的招聘结果不好不坏，办公室依旧准时开门，员工们也大多记得自己来这里上班。"
   }
 };
 
